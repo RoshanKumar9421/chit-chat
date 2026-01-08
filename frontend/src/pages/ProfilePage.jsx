@@ -14,14 +14,14 @@ const ProfilePage = () => {
   const file = e.target.files[0];
   if (!file) return;
 
-  console.log("FILE:", file); // 👈 ADD THIS
+  console.log("FILE:", file); 
 
   setPreviewImg(URL.createObjectURL(file));
 
   const formData = new FormData();
   formData.append("avatar", file);
 
-  console.log("FORMDATA:", [...formData.entries()]); // 👈 ADD THIS
+  console.log("FORMDATA:", [...formData.entries()]); 
 
   await updateProfile(formData);
 };
@@ -35,7 +35,7 @@ const ProfilePage = () => {
             <p className="mt-2">Your profile information</p>
           </div>
 
-          {/* Avatar */}
+         
           <div className="flex flex-col items-center gap-4">
             <div className="relative">
               <img
@@ -71,7 +71,7 @@ const ProfilePage = () => {
             </p>
           </div>
 
-          {/* Info */}
+         
           <div className="space-y-6">
             <div>
               <div className="text-sm text-zinc-400 flex items-center gap-2">
@@ -94,7 +94,7 @@ const ProfilePage = () => {
             </div>
           </div>
 
-          {/* Account */}
+         
           <div className="mt-6 bg-base-300 rounded-xl p-6">
             <h2 className="text-lg font-medium mb-4">Account Information</h2>
             <div className="space-y-3 text-sm">
